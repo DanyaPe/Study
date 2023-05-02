@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Visual Studios\\Проекты\\Study (MVC)\\Study (MVC).csproj",
+      "projectUniqueName": "D:\\repo\\Study\\Study (MVC)\\Study (MVC).csproj",
       "projectName": "Study (MVC)",
-      "projectPath": "D:\\Visual Studios\\Проекты\\Study (MVC)\\Study (MVC).csproj",
+      "projectPath": "D:\\repo\\Study\\Study (MVC)\\Study (MVC).csproj",
       "packagesPath": "C:\\Users\\dahill\\.nuget\\packages\\",
-      "outputPath": "D:\\Visual Studios\\Проекты\\Study (MVC)\\obj\\",
+      "outputPath": "D:\\repo\\Study\\Study (MVC)\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dahill\\AppData\\Roaming\\NuGet\\NuGet.Config",
