@@ -1,0 +1,17 @@
+﻿@model CreatePlayerViewModel
+@{
+    ViewData["Title"] = "Create Player";
+}
+
+<div>
+    <form asp-action="Player" asp-controller="Home" method="post">
+        <div asp-validation-summary="ModelOnly" style="font-family:Impact; font-size:15"></div>
+        <div>
+            <label>Name</label>
+            <input type="text" asp-for="Name"/>
+        </div>
+        <div>
+            <button type="submit">Отправить</button>
+        </div>
+    </form>
+</div>

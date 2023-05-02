@@ -1,0 +1,31 @@
+D:\Visual Studios\Проекты\Study (MVC)\bin\Debug\net7.0\appsettings.Development.json
+D:\Visual Studios\Проекты\Study (MVC)\bin\Debug\net7.0\appsettings.json
+D:\Visual Studios\Проекты\Study (MVC)\bin\Debug\net7.0\Study (MVC).staticwebassets.runtime.json
+D:\Visual Studios\Проекты\Study (MVC)\bin\Debug\net7.0\Study (MVC).exe
+D:\Visual Studios\Проекты\Study (MVC)\bin\Debug\net7.0\Study (MVC).deps.json
+D:\Visual Studios\Проекты\Study (MVC)\bin\Debug\net7.0\Study (MVC).runtimeconfig.json
+D:\Visual Studios\Проекты\Study (MVC)\bin\Debug\net7.0\Study (MVC).dll
+D:\Visual Studios\Проекты\Study (MVC)\bin\Debug\net7.0\Study (MVC).pdb
+D:\Visual Studios\Проекты\Study (MVC)\obj\Debug\net7.0\Study (MVC).csproj.AssemblyReference.cache
+D:\Visual Studios\Проекты\Study (MVC)\obj\Debug\net7.0\Study (MVC).GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studios\Проекты\Study (MVC)\obj\Debug\net7.0\Study (MVC).AssemblyInfoInputs.cache
+D:\Visual Studios\Проекты\Study (MVC)\obj\Debug\net7.0\Study (MVC).AssemblyInfo.cs
+D:\Visual Studios\Проекты\Study (MVC)\obj\Debug\net7.0\Study (MVC).csproj.CoreCompileInputs.cache
+D:\Visual Studios\Проекты\Study (MVC)\obj\Debug\net7.0\Study (MVC).MvcApplicationPartsAssemblyInfo.cache
+D:\Visual Studios\Проекты\Study (MVC)\obj\Debug\net7.0\Study (MVC).RazorAssemblyInfo.cache
+D:\Visual Studios\Проекты\Study (MVC)\obj\Debug\net7.0\Study (MVC).RazorAssemblyInfo.cs
+D:\Visual Studios\Проекты\Study (MVC)\obj\Debug\net7.0\staticwebassets\msbuild.Study (MVC).Microsoft.AspNetCore.StaticWebAssets.props
+D:\Visual Studios\Проекты\Study (MVC)\obj\Debug\net7.0\staticwebassets\msbuild.build.Study (MVC).props
+D:\Visual Studios\Проекты\Study (MVC)\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Study (MVC).props
+D:\Visual Studios\Проекты\Study (MVC)\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Study (MVC).props
+D:\Visual Studios\Проекты\Study (MVC)\obj\Debug\net7.0\staticwebassets.pack.json
+D:\Visual Studios\Проекты\Study (MVC)\obj\Debug\net7.0\staticwebassets.build.json
+D:\Visual Studios\Проекты\Study (MVC)\obj\Debug\net7.0\staticwebassets.development.json
+D:\Visual Studios\Проекты\Study (MVC)\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\Visual Studios\Проекты\Study (MVC)\obj\Debug\net7.0\scopedcss\bundle\Study (MVC).styles.css
+D:\Visual Studios\Проекты\Study (MVC)\obj\Debug\net7.0\scopedcss\projectbundle\Study (MVC).bundle.scp.css
+D:\Visual Studios\Проекты\Study (MVC)\obj\Debug\net7.0\Study (MVC).dll
+D:\Visual Studios\Проекты\Study (MVC)\obj\Debug\net7.0\refint\Study (MVC).dll
+D:\Visual Studios\Проекты\Study (MVC)\obj\Debug\net7.0\Study (MVC).pdb
+D:\Visual Studios\Проекты\Study (MVC)\obj\Debug\net7.0\Study (MVC).genruntimeconfig.cache
+D:\Visual Studios\Проекты\Study (MVC)\obj\Debug\net7.0\ref\Study (MVC).dll
