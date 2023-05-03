@@ -34,7 +34,7 @@ namespace Study__MVC_.Controllers
                 Players.Add(one);
                 return View(Players);
             }
-            return RedirectToAction("PlayerCreate");
+            return View("PlayerCreate");
         }
 
         public IActionResult PlayerCreate()
