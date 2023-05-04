@@ -2,7 +2,7 @@
 
 namespace Study__MVC_.Models
 {
-    public class Player
+    public class PlayerViewModel
     {
         public string Name;
 

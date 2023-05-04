@@ -1,0 +1,12 @@
+﻿@model PlayerViewModel
+@{
+    ViewData["Title"] = "PlayerClient";
+}
+
+<h1>Player: @Model.Name</h1>
+    <ul>
+         @foreach(var obj in @Model.Hand)
+        {
+            <li>@obj.Type - @obj.Desc</li>
+        }
+    </ul>

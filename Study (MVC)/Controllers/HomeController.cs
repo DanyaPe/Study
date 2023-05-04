@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AspNetCore;
+using Microsoft.AspNetCore.Mvc;
 using Study__MVC_.Models;
 using System.Diagnostics;
 
@@ -8,7 +9,7 @@ namespace Study__MVC_.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public static List<Player> Players = new();
+        public static List<PlayerViewModel> Players = new();
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -25,14 +26,15 @@ namespace Study__MVC_.Controllers
             return View();
         }
 
-        public IActionResult Player(CreatePlayerViewModel model)
+        public IActionResult PlayerList(CreatePlayerViewModel model)
         {
             if (ModelState.IsValid)
             {  
-                Player one = new Player();
+                PlayerViewModel one = new PlayerViewModel();
                 one.Name = model.Name;
+                one.GetCards();
                 Players.Add(one);
-                return View(Players);
+                return RedirectToAction("PlayerClient", one);
             }
             return View("PlayerCreate");
         }

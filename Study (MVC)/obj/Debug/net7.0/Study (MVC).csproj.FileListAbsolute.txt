@@ -60,3 +60,14 @@ D:\repo\Study\Study (MVC)\obj\Debug\net7.0\refint\Study (MVC).dll
 D:\repo\Study\Study (MVC)\obj\Debug\net7.0\Study (MVC).pdb
 D:\repo\Study\Study (MVC)\obj\Debug\net7.0\Study (MVC).genruntimeconfig.cache
 D:\repo\Study\Study (MVC)\obj\Debug\net7.0\ref\Study (MVC).dll
+C:\repo\Study(MVC)\Study\Study (MVC)\obj\Debug\net7.0\Study (MVC).csproj.AssemblyReference.cache
+C:\repo\Study(MVC)\Study\Study (MVC)\obj\Debug\net7.0\Study (MVC).GeneratedMSBuildEditorConfig.editorconfig
+C:\repo\Study(MVC)\Study\Study (MVC)\obj\Debug\net7.0\Study (MVC).AssemblyInfoInputs.cache
+C:\repo\Study(MVC)\Study\Study (MVC)\obj\Debug\net7.0\Study (MVC).AssemblyInfo.cs
+C:\repo\Study(MVC)\Study\Study (MVC)\obj\Debug\net7.0\Study (MVC).csproj.CoreCompileInputs.cache
+C:\repo\Study(MVC)\Study\Study (MVC)\obj\Debug\net7.0\Study (MVC).MvcApplicationPartsAssemblyInfo.cache
+C:\repo\Study(MVC)\Study\Study (MVC)\obj\Debug\net7.0\Study (MVC).RazorAssemblyInfo.cache
+C:\repo\Study(MVC)\Study\Study (MVC)\obj\Debug\net7.0\Study (MVC).RazorAssemblyInfo.cs
+C:\repo\Study(MVC)\Study\Study (MVC)\obj\Debug\net7.0\Study (MVC).dll
+C:\repo\Study(MVC)\Study\Study (MVC)\obj\Debug\net7.0\refint\Study (MVC).dll
+C:\repo\Study(MVC)\Study\Study (MVC)\obj\Debug\net7.0\Study (MVC).pdb
