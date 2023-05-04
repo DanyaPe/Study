@@ -1,4 +1,4 @@
-﻿using AspNetCore;
+﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Mvc;
 using Study__MVC_.Models;
 using System.Diagnostics;
@@ -34,7 +34,7 @@ namespace Study__MVC_.Controllers
                 one.Name = model.Name;
                 one.GetCards();
                 Players.Add(one);
-                return RedirectToAction("PlayerClient", one);
+                return View("PlayerClient", one);
             }
             return View("PlayerCreate");
         }

@@ -71,3 +71,23 @@ C:\repo\Study(MVC)\Study\Study (MVC)\obj\Debug\net7.0\Study (MVC).RazorAssemblyI
 C:\repo\Study(MVC)\Study\Study (MVC)\obj\Debug\net7.0\Study (MVC).dll
 C:\repo\Study(MVC)\Study\Study (MVC)\obj\Debug\net7.0\refint\Study (MVC).dll
 C:\repo\Study(MVC)\Study\Study (MVC)\obj\Debug\net7.0\Study (MVC).pdb
+C:\repo\Study(MVC)\Study\Study (MVC)\bin\Debug\net7.0\appsettings.Development.json
+C:\repo\Study(MVC)\Study\Study (MVC)\bin\Debug\net7.0\appsettings.json
+C:\repo\Study(MVC)\Study\Study (MVC)\bin\Debug\net7.0\Study (MVC).staticwebassets.runtime.json
+C:\repo\Study(MVC)\Study\Study (MVC)\bin\Debug\net7.0\Study (MVC).exe
+C:\repo\Study(MVC)\Study\Study (MVC)\bin\Debug\net7.0\Study (MVC).deps.json
+C:\repo\Study(MVC)\Study\Study (MVC)\bin\Debug\net7.0\Study (MVC).runtimeconfig.json
+C:\repo\Study(MVC)\Study\Study (MVC)\bin\Debug\net7.0\Study (MVC).dll
+C:\repo\Study(MVC)\Study\Study (MVC)\bin\Debug\net7.0\Study (MVC).pdb
+C:\repo\Study(MVC)\Study\Study (MVC)\obj\Debug\net7.0\staticwebassets\msbuild.Study (MVC).Microsoft.AspNetCore.StaticWebAssets.props
+C:\repo\Study(MVC)\Study\Study (MVC)\obj\Debug\net7.0\staticwebassets\msbuild.build.Study (MVC).props
+C:\repo\Study(MVC)\Study\Study (MVC)\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Study (MVC).props
+C:\repo\Study(MVC)\Study\Study (MVC)\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Study (MVC).props
+C:\repo\Study(MVC)\Study\Study (MVC)\obj\Debug\net7.0\staticwebassets.pack.json
+C:\repo\Study(MVC)\Study\Study (MVC)\obj\Debug\net7.0\staticwebassets.build.json
+C:\repo\Study(MVC)\Study\Study (MVC)\obj\Debug\net7.0\staticwebassets.development.json
+C:\repo\Study(MVC)\Study\Study (MVC)\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\repo\Study(MVC)\Study\Study (MVC)\obj\Debug\net7.0\scopedcss\bundle\Study (MVC).styles.css
+C:\repo\Study(MVC)\Study\Study (MVC)\obj\Debug\net7.0\scopedcss\projectbundle\Study (MVC).bundle.scp.css
+C:\repo\Study(MVC)\Study\Study (MVC)\obj\Debug\net7.0\Study (MVC).genruntimeconfig.cache
+C:\repo\Study(MVC)\Study\Study (MVC)\obj\Debug\net7.0\ref\Study (MVC).dll
