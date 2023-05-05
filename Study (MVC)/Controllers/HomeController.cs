@@ -26,21 +26,32 @@ namespace Study__MVC_.Controllers
             return View();
         }
 
-        public IActionResult PlayerList(CreatePlayerViewModel model)
+        [HttpPost]
+        public IActionResult PlayerCreate(CreatePlayerViewModel model)
         {
             if (ModelState.IsValid)
-            {  
+            {
                 PlayerViewModel one = new PlayerViewModel();
                 one.Name = model.Name;
                 one.GetCards();
                 Players.Add(one);
                 return View("PlayerClient", one);
             }
-            return View("PlayerCreate");
+            else
+            {
+                return View("PlayerCreate");
+            }
         }
 
+        [HttpGet]
         public IActionResult PlayerCreate()
         {
+            return View();
+        }
+
+        public IActionResult PlayerList()
+        {
+            ViewBag.PL = Players;
             return View();
         }
 
