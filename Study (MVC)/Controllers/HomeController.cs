@@ -9,8 +9,6 @@ namespace Study__MVC_.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public static List<PlayerViewModel> Players = new();
-
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
@@ -23,35 +21,6 @@ namespace Study__MVC_.Controllers
 
         public IActionResult Privacy()
         {
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult PlayerCreate(CreatePlayerViewModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                PlayerViewModel one = new PlayerViewModel();
-                one.Name = model.Name;
-                one.GetCards();
-                Players.Add(one);
-                return View("PlayerClient", one);
-            }
-            else
-            {
-                return View("PlayerCreate");
-            }
-        }
-
-        [HttpGet]
-        public IActionResult PlayerCreate()
-        {
-            return View();
-        }
-
-        public IActionResult PlayerList()
-        {
-            ViewBag.PL = Players;
             return View();
         }
 
