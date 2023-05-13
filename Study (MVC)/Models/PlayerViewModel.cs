@@ -4,12 +4,17 @@ namespace Study__MVC_.Models
 {
     public class PlayerViewModel
     {
-        public string Name;
+        [Key]
+        [Required(ErrorMessage = "Обязательное поле")]
+        [MinLength(2, ErrorMessage = "Минимальная длина имени 2 символа")]
+        public string Name { get; set; }
 
-        public List<Card> Hand;
+        //public List<Card> Hand { get; set; }
+
+        public int sys_status { get; set; }
 
         // Выдаем карты на руки
-        public void GetCards()
+        /*public void GetCards()
         {
             CardHealthModel Health = new CardHealthModel(this.Name);
             CardInventoryModel Inventory = new CardInventoryModel(this.Name);
@@ -19,6 +24,6 @@ namespace Study__MVC_.Models
             CardProfModel Prof = new CardProfModel(this.Name);
 
             Hand = new List<Card> { Health, Inventory, Biology, Fact, Hobby, Prof};
-        }
+        }*/
     }
 }

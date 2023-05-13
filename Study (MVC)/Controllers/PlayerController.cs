@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Study__MVC_.Models;
 using System.Diagnostics;
 
@@ -7,18 +8,24 @@ namespace Study__MVC_.Controllers
 {
     public class PlayerController: Controller
     {
-        public static List<PlayerViewModel> Players = new();
+        ApplicationContext db;
+        public PlayerController(ApplicationContext context)
+        {
+            db = context;
+        }
 
         [HttpPost]
-        public IActionResult PlayerCreate(CreatePlayerViewModel model)
+        public async Task<IActionResult> PlayerCreate(PlayerViewModel model)
         {
             if (ModelState.IsValid)
             {
                 PlayerViewModel one = new PlayerViewModel();
                 one.Name = model.Name;
-                one.GetCards();
-                Players.Add(one);
-                return View("PlayerClient", one);
+                //one.GetCards();
+                one.sys_status = 0;
+                db.player.Add(one);
+                db.SaveChangesAsync();
+                return RedirectToAction("PlayerList", db.player);
             }
             else
             {
@@ -32,10 +39,10 @@ namespace Study__MVC_.Controllers
             return View();
         }
 
-        public IActionResult PlayerList()
+        public async Task<IActionResult> PlayerList()
         {
-            ViewBag.PL = Players;
-            return View();
+            //ViewBag.PL = Players;
+            return View(await db.player.ToListAsync());
         }
     }
 }
