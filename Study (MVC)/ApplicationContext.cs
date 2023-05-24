@@ -10,6 +10,6 @@ using Microsoft.EntityFrameworkCore;
 
             public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options) { }
 
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => optionsBuilder.UseMySql("server=localhost;user=root;password=521060DZ521060;database=study(MCV);", new MySqlServerVersion(new Version(8, 0, 33)));
+            //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => optionsBuilder.UseMySql("server=localhost;user=root;password=521060DZ521060;database=study(MVС);", new MySqlServerVersion(new Version(8, 0, 33)));
         }
 }

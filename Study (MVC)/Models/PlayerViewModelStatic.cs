@@ -2,8 +2,9 @@
 
 namespace Study__MVC_.Models
 {
-    public class PlayerViewModel
+    public class PlayerViewModelStatic
     {
+        [Key]
         [Required(ErrorMessage = "Обязательное поле")]
         [MinLength(2, ErrorMessage = "Минимальная длина имени 2 символа")]
         public string Name { get; set; }
@@ -12,7 +13,7 @@ namespace Study__MVC_.Models
 
         public int sys_status { get; set; }
 
-        public string? CookieUrl { get; set; }
+        public string CookieUrl { get; set; }
 
         // Выдаем карты на руки
         /*public void GetCards()

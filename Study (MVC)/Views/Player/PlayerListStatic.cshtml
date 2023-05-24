@@ -1,0 +1,16 @@
+﻿@model List<PlayerViewModel>
+
+@{
+    ViewData["Title"] = "Player";
+}
+
+<div>
+    <h1>Список игроков</h1>
+    <ul>
+        @foreach (var obj in Model)
+        {
+            <li>@obj.Name</li>
+            <li>@obj.sys_status</li>
+        }
+    </ul>
+</div>
