@@ -1,9 +1,12 @@
 ﻿using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Study__MVC_.Models;
 using System.Diagnostics;
+using System.Net;
+using System.Security.Claims;
 
 namespace Study__MVC_.Controllers
 {
@@ -65,14 +68,24 @@ namespace Study__MVC_.Controllers
         {
             if (ModelState.IsValid)
             {
+                var claims = new List<Claim>
+                {
+                    new Claim("Demo", "Value")
+                };
+                var claimIdentity = new ClaimsIdentity(claims, "Cookies");
+                var claimPrincipal = new ClaimsPrincipal(claimIdentity);
+                await HttpContext.SignInAsync("Cookies", claimPrincipal);
+
                 PlayerViewModel one = new PlayerViewModel();
                 one.Name = model.Name;
                 one.sys_status = 0;
-                one.CookieUrl = model.CookieUrl;
+                one.ReturnUrl = model.ReturnUrl;
                 PL.Add(one);
-                return Redirect("PlayerListStatic");
+
+                return Redirect(model.ReturnUrl);
 
             }
+            
             else
             {
                 return View("PlayerCreate");
@@ -80,12 +93,12 @@ namespace Study__MVC_.Controllers
         }
 
         [HttpGet]
-        public IActionResult PlayerCreate()
+        public IActionResult PlayerCreate(string returnUrl)
         {
             return View();
         }
 
-        //[Authorize]
+        [Authorize]
         public IActionResult PlayerListStatic()
         {
             return View(PL);

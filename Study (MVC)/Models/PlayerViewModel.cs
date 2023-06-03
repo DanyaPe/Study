@@ -12,7 +12,7 @@ namespace Study__MVC_.Models
 
         public int sys_status { get; set; }
 
-        public string? CookieUrl { get; set; }
+        public string ReturnUrl { get; set; }
 
         // Выдаем карты на руки
         /*public void GetCards()

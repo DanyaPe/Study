@@ -1,7 +1,3 @@
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
-using Study__MVC_;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
