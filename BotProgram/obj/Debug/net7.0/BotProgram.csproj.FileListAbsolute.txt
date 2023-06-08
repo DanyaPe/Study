@@ -16,3 +16,21 @@ D:\Visual Studios\Проекты\BotProgram\obj\Debug\net7.0\refint\BotProgram.d
 D:\Visual Studios\Проекты\BotProgram\obj\Debug\net7.0\BotProgram.pdb
 D:\Visual Studios\Проекты\BotProgram\obj\Debug\net7.0\BotProgram.genruntimeconfig.cache
 D:\Visual Studios\Проекты\BotProgram\obj\Debug\net7.0\ref\BotProgram.dll
+D:\repo\Study\BotProgram\bin\Debug\net7.0\BotProgram.exe
+D:\repo\Study\BotProgram\bin\Debug\net7.0\BotProgram.deps.json
+D:\repo\Study\BotProgram\bin\Debug\net7.0\BotProgram.runtimeconfig.json
+D:\repo\Study\BotProgram\bin\Debug\net7.0\BotProgram.dll
+D:\repo\Study\BotProgram\bin\Debug\net7.0\BotProgram.pdb
+D:\repo\Study\BotProgram\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\repo\Study\BotProgram\bin\Debug\net7.0\Telegram.Bot.dll
+D:\repo\Study\BotProgram\obj\Debug\net7.0\BotProgram.csproj.AssemblyReference.cache
+D:\repo\Study\BotProgram\obj\Debug\net7.0\BotProgram.GeneratedMSBuildEditorConfig.editorconfig
+D:\repo\Study\BotProgram\obj\Debug\net7.0\BotProgram.AssemblyInfoInputs.cache
+D:\repo\Study\BotProgram\obj\Debug\net7.0\BotProgram.AssemblyInfo.cs
+D:\repo\Study\BotProgram\obj\Debug\net7.0\BotProgram.csproj.CoreCompileInputs.cache
+D:\repo\Study\BotProgram\obj\Debug\net7.0\BotProgram.csproj.CopyComplete
+D:\repo\Study\BotProgram\obj\Debug\net7.0\BotProgram.dll
+D:\repo\Study\BotProgram\obj\Debug\net7.0\refint\BotProgram.dll
+D:\repo\Study\BotProgram\obj\Debug\net7.0\BotProgram.pdb
+D:\repo\Study\BotProgram\obj\Debug\net7.0\BotProgram.genruntimeconfig.cache
+D:\repo\Study\BotProgram\obj\Debug\net7.0\ref\BotProgram.dll

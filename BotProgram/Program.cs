@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using Newtonsoft.Json;
+using System;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Telegram.Bot;
@@ -16,22 +19,29 @@ namespace BotProgram
         static void Main()
         {
             var client = new TelegramBotClient(token);
-            client.ReceiveAsync(Update, Error);
+            client.StartReceiving(Update, Error);
             Console.ReadLine();
         }
 
         async static Task Update(ITelegramBotClient client, Update update, CancellationToken token)
         {
             Console.WriteLine("Выполняю Attention");
-            do
+            //do
+            //{
+            //    if (System.DateTime.Now.Hour == 23 /*&& System.DateTime.Now.Minute == 52 && System.DateTime.Now.DayOfWeek != DayOfWeek.Sunday && System.DateTime.Now.DayOfWeek != DayOfWeek.Saturday*/)
+            //    {
+            //        Console.WriteLine($"Направляю уведомление, время - {System.DateTime.Now}");
+            //        await client.SendTextMessageAsync(my_id, $"Доброе утро, время {System.DateTime.Now}, давай проверим выполнил ли ты все нужные дела!", replyMarkup: GetButtons("yes","no"));
+
+            //    }
+            //    System.Threading.Thread.Sleep(60000);
+            //} while (true);
+
+            if (update.Message.Text == "Да")
             {
-                if (System.DateTime.Now.Hour == 19 /*&& System.DateTime.Now.Minute == 58*/)
-                {
-                    Console.WriteLine($"Направляю уведомление, время - {System.DateTime.Now}");
-                    client.SendTextMessageAsync(my_id, $"Доброе утро, время {System.DateTime.Now}, давай проверим выполнил ли ты все нужные дела!", replyMarkup: GetButtons("yes", "no"));
-                }
-                System.Threading.Thread.Sleep(60000); ;
-            } while (true);
+                await HandlerMessage(client, update.Message);
+            }
+
             //var message = update.Message;
             //Console.WriteLine(DateTime.Now);
             //if (message.Text != null && message.Text.Contains("test"))
@@ -56,10 +66,26 @@ namespace BotProgram
                 },
                 new[]
                 {
-                    InlineKeyboardButton.WithCallbackData(text2, "myCommand1"),
+                    InlineKeyboardButton.WithCallbackData(text2, "myCommand2"),
                 },
             });
             return ikm;
         }
+
+        async static Task HandlerMessage(ITelegramBotClient client, Message message)
+        {
+                Console.WriteLine("Отвечаю на кнопку");
+        }
+
+        //async static public void myCommand1()
+        //{
+        //    string text = $"Положительный ответ, {System.DateTime.Now}";
+        //    using (FileStream fstream = new FileStream("info.xml", FileMode.Append))
+        //    {
+        //        byte[] buffer = Encoding.Default.GetBytes(text);
+        //        fstream.WriteAsync(buffer, 0, buffer.Length);
+        //        Console.WriteLine($"Текст записан в файл - {fstream.Name}");
+        //    }
+        //}
     }
 }
