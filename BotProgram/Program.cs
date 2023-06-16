@@ -20,34 +20,23 @@ namespace BotProgram
         {
             var client = new TelegramBotClient(token);
             client.StartReceiving(Update, Error);
+            TimeTaskCheck(client);
             Console.ReadLine();
         }
 
         async static Task Update(ITelegramBotClient client, Update update, CancellationToken token)
         {
-            Console.WriteLine("Выполняю Attention");
-            //do
-            //{
-            //    if (System.DateTime.Now.Hour == 23 /*&& System.DateTime.Now.Minute == 52 && System.DateTime.Now.DayOfWeek != DayOfWeek.Sunday && System.DateTime.Now.DayOfWeek != DayOfWeek.Saturday*/)
-            //    {
-            //        Console.WriteLine($"Направляю уведомление, время - {System.DateTime.Now}");
-            //        await client.SendTextMessageAsync(my_id, $"Доброе утро, время {System.DateTime.Now}, давай проверим выполнил ли ты все нужные дела!", replyMarkup: GetButtons("yes","no"));
-
-            //    }
-            //    System.Threading.Thread.Sleep(60000);
-            //} while (true);
-
-            if (update.Message.Text == "Да")
+            if (update.Message != null)
             {
-                await HandlerMessage(client, update.Message);
+                if (update.Message.Text.ToLower().Contains("тест"))
+                {
+                    Console.WriteLine("Я живой");
+                }
             }
-
-            //var message = update.Message;
-            //Console.WriteLine(DateTime.Now);
-            //if (message.Text != null && message.Text.Contains("test"))
-            //{
-            //    await client.SendTextMessageAsync(my_id, "Я живой"); 
-            //}
+            else if(update.CallbackQuery.Data == "myCommand1")
+            {
+                client.SendTextMessageAsync(my_id, $"Отрабатываю кнопку 'Да'");
+            }
         }
 
         async static Task Error(ITelegramBotClient arg1, Exception arg2, CancellationToken arg3)
@@ -72,9 +61,23 @@ namespace BotProgram
             return ikm;
         }
 
-        async static Task HandlerMessage(ITelegramBotClient client, Message message)
+        async static Task TimeTaskCheck(ITelegramBotClient client)
         {
-                Console.WriteLine("Отвечаю на кнопку");
+            do
+            {
+                Console.WriteLine("Выполняю проверку по времени");
+                if (System.DateTime.Now.Hour == 23 && System.DateTime.Now.Minute == 23 /*&& System.DateTime.Now.Second == 05 && System.DateTime.Now.DayOfWeek != DayOfWeek.Sunday && System.DateTime.Now.DayOfWeek != DayOfWeek.Saturday*/)
+                {
+                    client.SendTextMessageAsync(my_id, $"Доброе утро, время {System.DateTime.Now}, давай проверим выполнил ли ты все нужные дела!", replyMarkup: GetButtons("yes", "no"));
+                    Console.WriteLine($"Сообщение отправлено в {System.DateTime.Now}, ожидаю") ;
+                    System.Threading.Thread.Sleep(60000);
+                }
+                else
+                {
+                    Console.WriteLine("Ожидаю");
+                    System.Threading.Thread.Sleep(60000);
+                }
+            } while(true);
         }
 
         //async static public void myCommand1()
