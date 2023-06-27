@@ -12,8 +12,8 @@ namespace BotProgram
         private static string my_id = "5133411380";
         static string pattern1 = @"^(\d*)\s(заявок)";
         static string pattern2 = @"(книга - )([а-яА-я0-9\s]*)";
-        static string ?artname;
-        static List<int> updateid = new List<int>();
+        static string pattern3 = @"^(\d*)\s(штук)";
+        static string? artname;
 
         static void Main()
         {
@@ -25,36 +25,40 @@ namespace BotProgram
 
         async static Task Update(ITelegramBotClient client, Update update, CancellationToken token)
         {
-            updateid.Add(update.Message.MessageId);
             //Обработка сообщений
             if (update.Message != null)
             {
-                if (update.Message.Text.ToLower().Contains("тест"))
+                if (update.Message.Text != null)
                 {
-                    Console.WriteLine("Я живой");
-                    //client.SendTextMessageAsync(my_id, $"Начитаный получается, что же ты читал?\nНапиши 'Книга - ' и название произведения, к примеру последняя запись у нас {artname}");
-                    //foreach(var i in updateid)
-                    //{
-                    //    Console.WriteLine(i);
-                    //}
-                }
-                //Запись количества заявок
-                else if (Regex.IsMatch(update.Message.Text, pattern1, RegexOptions.IgnoreCase))
-                {
-                    client.SendTextMessageAsync(my_id, $"Количество завок на {System.DateTime.Today.ToShortDateString()} записано в файл TicketValue.XML");
-                    PrintToFile("TicketValue", update.Message.Text);
-                }
-                //Запись произведения на сегодня
-                else if (Regex.IsMatch(update.Message.Text, pattern2, RegexOptions.IgnoreCase))
-                {
-                    client.SendTextMessageAsync(my_id, $"Произведение на {System.DateTime.Today.ToShortDateString()} записано в файл Art.XML");
-                    PrintToFile("Art", update.Message.Text);
-                    artname = update.Message.Text;
-                }
-                //Обработка другого сообщения
-                else
-                {
-                    client.SendTextMessageAsync(my_id, $"Данек, ничего не понял, давай по новой");
+                    if (update.Message.Text.ToLower().Contains("тест"))
+                    {
+                        //Console.WriteLine("Я живой");
+                        //client.SendTextMessageAsync(my_id, $"Начитаный получается, что же ты читал?\nНапиши 'Книга - ' и название произведения, к примеру последняя запись у нас {artname}");
+                    }
+                    //Запись количества заявок
+                    else if (Regex.IsMatch(update.Message.Text, pattern1, RegexOptions.IgnoreCase))
+                    {
+                        client.SendTextMessageAsync(my_id, $"Количество завок на {System.DateTime.Today.ToShortDateString()} записано в файл TicketValue.XML");
+                        PrintToFile("TicketValue", update.Message.Text);
+                        client.SendTextMessageAsync(my_id, $"А просрочки есть?", replyMarkup:GetButtons("Да", "Нет", "myCommand5", "myCommand6"))
+                    }
+                    //Запись произведения на сегодня
+                    else if (Regex.IsMatch(update.Message.Text, pattern2, RegexOptions.IgnoreCase))
+                    {
+                        client.SendTextMessageAsync(my_id, $"Произведение на {System.DateTime.Today.ToShortDateString()} записано в файл Art.XML");
+                        PrintToFile("Art", update.Message.Text);
+                        artname = update.Message.Text;
+                    }
+                    else if (Regex.IsMatch(update.Message.Text, pattern3, RegexOptions.IgnoreCase))
+                    {
+                        client.SendTextMessageAsync(my_id, $"Количество просроков на {System.DateTime.Today.ToShortDateString()} записано в файл Deadline.XML");
+                        PrintToFile("Deadline", update.Message.Text);
+                    }
+                    //Обработка другого сообщения
+                    else
+                    {
+                        client.SendTextMessageAsync(my_id, $"Данек, ничего не понял, давай по новой");
+                    }
                 }
             }
             //Обработка кнопок
@@ -82,6 +86,16 @@ namespace BotProgram
                 {
                     client.SendTextMessageAsync(my_id, $"Да уж, не быть тебе русским романтиком\nТак и запишем в файлик Art.XML - 'не читал'");
                     PrintToFile("Art", "Не читал");
+                }
+                //Кнопка "Да" на вопрос о просроках
+                else if (update.CallbackQuery.Data == "myCommand5")
+                {
+                    client.SendTextMessageAsync(my_id, $"Это больно\nСколько штук?");
+                }
+                //Кнопка "Нет" на вопрос о просроках
+                else if (update.CallbackQuery.Data == "myCommand6")
+                {
+                    client.SendTextMessageAsync(my_id, $"Ля красава");
                 }
             }
         }
