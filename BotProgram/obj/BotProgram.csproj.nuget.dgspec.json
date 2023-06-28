@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\repo\\Study\\BotProgram\\BotProgram.csproj": {}
+    "C:\\repo\\Study(MVC)\\Study\\BotProgram\\BotProgram.csproj": {}
   },
   "projects": {
-    "D:\\repo\\Study\\BotProgram\\BotProgram.csproj": {
+    "C:\\repo\\Study(MVC)\\Study\\BotProgram\\BotProgram.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\repo\\Study\\BotProgram\\BotProgram.csproj",
+        "projectUniqueName": "C:\\repo\\Study(MVC)\\Study\\BotProgram\\BotProgram.csproj",
         "projectName": "BotProgram",
-        "projectPath": "D:\\repo\\Study\\BotProgram\\BotProgram.csproj",
-        "packagesPath": "C:\\Users\\dahill\\.nuget\\packages\\",
-        "outputPath": "D:\\repo\\Study\\BotProgram\\obj\\",
+        "projectPath": "C:\\repo\\Study(MVC)\\Study\\BotProgram\\BotProgram.csproj",
+        "packagesPath": "C:\\Users\\dzvorunov\\.nuget\\packages\\",
+        "outputPath": "C:\\repo\\Study(MVC)\\Study\\BotProgram\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\dahill\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dzvorunov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -61,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
