@@ -12,8 +12,12 @@ namespace BotProgram
         private static string my_id = "5133411380";
         static string pattern1 = @"^(\d*)\s(заявок)";
         static string pattern2 = @"(книга - )([а-яА-я0-9\s]*)";
+<<<<<<< HEAD
+        static string ?artname;
+=======
         static string pattern3 = @"^(\d*)\s(штук)";
         static string? artname;
+>>>>>>> ac19f566fd05f3c5b647e9b5a7640605a76d2ac3
 
         static void Main()
         {
@@ -28,6 +32,31 @@ namespace BotProgram
             //Обработка сообщений
             if (update.Message != null)
             {
+<<<<<<< HEAD
+                if (update.Message.Text != null)
+                {
+                    if (update.Message.Text.ToLower().Contains("тест"))
+                    {
+                        Console.WriteLine("Я живой");
+                    }
+                    //Запись количества заявок
+                    else if (Regex.IsMatch(update.Message.Text, pattern1, RegexOptions.IgnoreCase))
+                    {
+                        client.SendTextMessageAsync(my_id, $"Количество завок на {System.DateTime.Today.ToShortDateString()} записано в файл TicketValue.XML");
+                        PrintToFile("TicketValue", update.Message.Text);
+                    }
+                    //Запись произведения на сегодня
+                    else if (Regex.IsMatch(update.Message.Text, pattern2, RegexOptions.IgnoreCase))
+                    {
+                        client.SendTextMessageAsync(my_id, $"Произведение на {System.DateTime.Today.ToShortDateString()} записано в файл Art.XML");
+                        PrintToFile("Art", update.Message.Text);
+                        artname = update.Message.Text;
+                    }
+                    //Обработка другого сообщения
+                    else
+                    {
+                        client.SendTextMessageAsync(my_id, $"Данек, ничего не понял, давай по новой");
+=======
                 if (update.Message.Text != null)
                 {
                     if (update.Message.Text.ToLower().Contains("тест"))
@@ -58,8 +87,10 @@ namespace BotProgram
                     else
                     {
                         client.SendTextMessageAsync(my_id, $"Данек, ничего не понял, давай по новой");
+>>>>>>> ac19f566fd05f3c5b647e9b5a7640605a76d2ac3
                     }
                 }
+
             }
             //Обработка кнопок
             else if(update.CallbackQuery.Data != null)
